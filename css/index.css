@@ -1,0 +1,658 @@
+ /*FONTS*/
+@font-face {
+    font-family: 'quicksandbook';
+    src: url('Quicksand_Book-webfont.eot');
+    src: url('Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('Quicksand_Book-webfont.woff2') format('woff2'),
+    url('Quicksand_Book-webfont.woff') format('woff'),
+    url('Quicksand_Book-webfont.ttf') format('truetype'),
+    url('Quicksand_Book-webfont.svg#quicksandbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('Quicksand_Light-webfont.eot');
+    src: url('Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('Quicksand_Light-webfont.woff2') format('woff2'),
+    url('Quicksand_Light-webfont.woff') format('woff'),
+    url('Quicksand_Light-webfont.ttf') format('truetype'),
+    url('Quicksand_Light-webfont.svg#quicksandlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	text-shadow: 2px 2px #000;
+	color: white;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+    font-family: 'Calibri', Arial, sans-serif !important;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+	color: white;
+	background-size: cover;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#000000;
+    font-size:12px;
+    margin:0px 0px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+    text-align: center;
+    color:#fff;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+    text-align: center;
+    color:#fff;
+}
+
+#homeButton{
+    margin-top:10px;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+/*Own CSS added files*/
+
+ h1 {
+     font-family: 'quicksandbook';
+     font-size: 20px;
+     padding-bottom: 20px;
+ }
+
+ h1,
+ h2,
+ h3,
+ p,
+ a,
+ span,
+ label {
+     text-transform: none;
+ }
+
+
+ select,
+ textarea,
+ input[type="text"],
+ input[type="search"],
+ input[type="password"],
+ input[type="datetime"],
+ input[type="datetime-local"],
+ input[type="date"],
+ input[type="month"],
+ input[type="time"],
+ input[type="week"],
+ input[type="number"],
+ input[type="email"],
+ input[type="url"],
+ input[type="tel"],
+ input[type="color"] {
+     margin-bottom: 5px;
+     border: 1px #c1c1c1 solid !important;
+ }
+
+ /*Phoneon Stuff*/
+ .app-page {
+     overflow: auto !important;
+ }
+
+ /*Headerstuff*/
+ .header-bar {
+     background-color: #cedf62 !important;
+     text-align: center !important;
+ }
+
+     .header-bar img {
+         margin-top: 8px;
+     }
+
+ .btn-action {
+     padding-left: 8px !important;
+ }
+
+ .btn-action.pull-left {
+             /* margin-right: 26px; */
+             left: 0;
+             position: absolute;
+             top: 0px;
+         }
+
+         .btn-action.pull-right {
+             /* margin-right: 26px; */
+             right: 10px;
+             position: absolute;
+         }
+
+         .transparent {
+             background-color: transparent !important;
+         }
+
+ /*Form Stuff*/
+
+ select, textarea, input[type="text"], input[type="search"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="tel"], input[type="color"] {
+     height: 50px !important;
+     border-radius: 5px !important;
+     padding: 15px;
+     font-size: 1em;
+     color: #c1c1c1;
+ }
+
+label input[type="checkbox"],
+label input[type="radio"] {
+     display: none;
+ }
+
+label .styleCheckbox {
+     height: 30px;
+     width: 30px;
+     background: url('../img/checkboxNotChecked.png');
+     background-size: cover;
+     display: block;
+     cursor: pointer;
+ }
+
+label input[type="checkbox"]:checked + .styleCheckbox,
+label input[type="radio"]:checked + .styleCheckbox{
+     background: url('../img/checkboxChecked.png');
+    background-size: cover;
+ }
+
+     input[type="checkbox"]:checked::before {
+         width: 30px !important;
+         height: 30px !important;
+         position: relative !important;
+     }
+
+     .mainform label {
+         margin-top: 20px;
+         text-transform: none;
+         font-size: 15px;
+         color: #747474;
+         margin-bottom: 10px;
+     }
+
+         .padded-for-cell input[type=submit] {
+             background: none;
+             border: none;
+             color: #ffffff;
+         }
+
+
+         .icoon {
+             background-repeat: no-repeat;
+             height: 20px;
+             width: 20px;
+             position: absolute;
+             right: 30px;
+             margin-top: 15px;
+             -webkit-filter: grayscale(20%);
+         }
+
+
+ /*Button stuff*/
+
+.padded-for-cell {
+    color: #ffffff;
+    background-color: #4fc5d8;
+    width: 100%;
+    padding: 18px 0;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    border-bottom: 3px #1aa6bc solid;
+    border-right: 3px #1aa6bc solid;
+}
+
+ .padded-for-cell:active {
+     border-top: 3px #1aa6bc solid;
+     border-left: 3px #1aa6bc solid;
+     border-bottom: 0;
+     border-right: 0;
+ }
+
+ /*Table Stuff*/
+
+ /*Table Stuff*/
+ label {
+     padding: 5px 0 !important;
+ }
+ table tbody tr td {
+     padding: 0 !important;
+     line-height: 0 !important;
+ }
+
+ table, .table > tbody + tbody {
+     border: 0 !important;
+ }
+
+ table.formtable {
+     width: 100%;
+ }
+
+    .formtable tr {
+        width: 100%;
+        border: none;
+    }
+
+        .formtable tr td:nth-child(1){
+            width: 20%;
+            text-align: left;
+            border-top: 0;
+        }
+
+         .formtable tr td:nth-child(2){
+             width: 80%;
+             text-align: left;
+             border-top: 0;
+         }
+
+
+
+/*Startscherm/loginscherm*/
+
+ .app-page.start {
+     overflow: hidden !important;
+ }
+
+     .container.startscherm {
+         height: 100%;
+         overflow: hidden;
+         text-align: center;
+         margin-top: 0;
+     }
+
+         .logostart {
+             margin: 30% auto 9.45%;
+         }
+
+         .loading {
+             margin: 20px 40% 0;
+         }
+
+         .deviceready.startloader {
+             margin-top: 20px;
+         }
+
+             .startloader p {
+                 position: absolute;
+                 text-align: center;
+                 width: 80%;
+                 bottom: 30px;
+             }
+
+             .white {
+                 color: #ffffff;
+             }
+
+                 .underline {
+                     text-decoration: underline;
+                 }
+
+/*Registreer*/
+
+.registrerencontainer {
+    margin-top: 100px !important;
+
+}
+ #registreer {
+     overflow: hidden;
+ }
+
+     .startRegistreer {
+         margin-top: 175px;
+     }
+
+         .startRegistreerImage {
+             top: 55px;
+             left: 0;
+             position: absolute;
+             z-index: -20;
+         }
+
+         .greenBackground {
+             width: 100%;
+             display: block;
+             height: 335px;
+             background-color: #cedf60;
+             bottom: 0;
+             position: absolute;
+             z-index: -1;
+             left: 0;
+         }
+
+         .registreerdiv {
+             height: 320px;
+             overflow-y: auto;
+             overflow-x: hidden;
+         }
+
+             .bottombutton {
+                 width: 90% !important;
+                 bottom: 10px;
+                 position: absolute;
+             }
+
+             .bottombutton.inform {
+                 bottom: 70px;
+             }
+
+.RegistreerFooter {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #cedf60;
+    display: none;
+    box-shadow: 0 0 4px #8a8a8a;
+}
+
+     .next {
+         width: 100%;
+         text-align: center;
+         margin: 0 auto;
+         position: fixed;
+         /* bottom: 0; */
+         padding: 15px;
+     }
+
+     .next img {
+         height: 30px;
+         margin: 4px;
+     }
+
+     .next img.grey {
+         -webkit-filter: grayscale(100%);
+         filter: grayscale(100%);
+     }
+
+     label.vraag {
+         font-size: 16px;
+         padding-bottom: 15px important!;
+         color: #7d7d7d;
+     }
+
+     .registreerform .first input[type="text"] {
+         margin-bottom: 30px;
+     }
+
+/*Suggestiescherm*/
+ .deviceready.searchresultaat {
+     max-height: 60%;
+     overflow-y: auto;
+ }
+
+
+
+
+
+
+
+
+
+
+ .block {
+     display: block;
+ }
+
+ .app-page.start {
+     background-color: #cedf62;
+ }
+
+
+ .container {
+     width: 90%;
+     margin: 55px auto 0;
+     overflow: hidden;
+     height: 75%;
+ }
+
+
+         .padded-for-cell.bottom {
+             margin-top: 20px;
+         }
+
+         .info {
+             width: 80%;
+             display: inline-block;
+         }
+
+
+ .loadingscreen {
+     display: block;
+     height: 100%;
+     width: 100%;
+     background-color: #cedf62;
+     position: absolute;
+     z-index: 99999;
+ }
+
+     .loadingtwo {
+         text-align: center;
+     }
+
+.fancybox {
+    display: block;
+}
+
+ .listcontent img {
+     height: 70px;
+     width: 70px;
+     border-radius: 50%;
+     float: left;
+ }
+
+    .listcontent .text {
+        width: 60%;
+        float: left;
+        margin-left: 10%;
+    }
+
+ .listcontent .text h2 {
+     font-size: 20px;
+ }
+
+ .listcontent .text p {
+    text-align: justify;
+ }
+
+.wrapper {
+    width: 100%;
+}
+
+
+
+
+
+
+     /*Footer*/
+.iconsbottom {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: #cedf62;
+    box-shadow: 0 0 4px #8a8a8a;
+    z-index: 22;
+    display: none;
+}
+
+    .icon {
+        width: 25%;
+        float: left;
+    }
+
+
+    .icon.grey {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+        .icon img {
+            margin: 15px 10% 10%;
+        }
+
+        .icon p {
+            color: #ffffff;
+            width: 100%;
+            text-align: center;
+        }
+
+/*TO DO*/
+ .todo {
+     float: right;
+ }
+
+.check{
+     float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+ }
+
+.line {
+    margin-top: 38px;
+}
+
+
+.fancybox-inner div .float form label span {
+    float: left;
+}
+
+.suggestieTekst {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.suggestiecontent {
+    padding-top: 35px;
+    max-height: 96%;
+    overflow-y: auto
+}
+
+
+
+
+
+
+
+ /*Side Navigation after logging in*/
+
+ .sidenav {
+     position: absolute;
+     display: block;
+     width: 75%;
+     left: -90%;
+     height: 100%;
+     background-color: #46b0c0;
+     z-index: 999;
+     box-shadow: 5px 0 45px #333333;
+ }
+
+ .categorieselecteren {
+     background-color: #50c5d7;
+     border-top: 2px solid #3a8d9b;
+     border-bottom: 2px solid #3a8d9b;
+     margin-top: 20px;
+ }
+
+ .categorieselecteren hr {
+     margin: 10px 0;
+ }
+
+ .overlay {
+     position: absolute;
+     display: block;
+     background-color: #000;
+     height: 100%;
+     width: 100%;
+     opacity: 0.5;
+     z-index: 998;
+ }
+
+     .sidenav div {
+         padding: 20px 8px;
+     }
+
+        .sidenav div form {
+            margin-top: 55px;
+        }
+
+         .sidenav div h2 {
+             color: white;
+             font-size: 20px;
+             margin-bottom: 5px;
+         }
+
+         .sidenav div a {
+             color: white;
+         }
+
+         .icoon.side {
+             position: relative;
+             right: 0;
+             margin-top: 0;
+             margin-left: 15px;
+             margin-right: 15px;
+             height: 15px;
+             width: 15px;
+         }
+
+
+
+
+ .maintitle {
+     font-size: 20px;
+     margin-top: 6px;
+     float: left;
+ }
