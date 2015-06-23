@@ -40,7 +40,7 @@ function nullHandler(){};
 
 
 function onDeviceReady() {
-    Phonon.Navigator().start('welkomscherm');                    //load the content for the indexscreen: welkomscherm.html
+    Phonon.Navigator().start('registreer');                    //load the content for the indexscreen: welkomscherm.html
 }
 
 
@@ -294,7 +294,7 @@ function continueform() {
     var email = $('#email').val();
     var wachtwoord = $('#wachtwoord').val();
     var wachtwoordconfirm = $('#wachtwoordconfirm').val();
-
+    
     if ((gebruikersnaam != "") && (email != "") && (wachtwoord != "") && (wachtwoordconfirm != "")) {
         if (wachtwoord === wachtwoordconfirm) {
 
@@ -374,7 +374,6 @@ function fourthfield () {
         $('#fourth-field').removeClass('grey');
     });
 }
-
 
 //----------------------------------------FUNCTION FOR THE SIDE NAVIGATION------------------------------------------
 function navigation () {
@@ -1248,6 +1247,22 @@ Phonon.Navigator().on({page: 'registreer', template: 'registreer', asynchronous:
         console.log('registreer: onCreate');                       //loads when you open the page
         self.runReady();
     });
+    
+    activity.onReady(function(self, el, req) {
+
+
+        $("#gebruikersnaam").focusin(function(){
+            $(".registreerform").css('margin-top','-30%');
+        //$(".redenennext").css('bottom','50%');
+        });
+
+        $("#gebruikersnaam").focusout(function(){
+            $(".registreerform").css('margin-top','100px');
+            //$(".redenennext").css('bottom','10%');
+        });
+        console.log('registreer: onReady');   
+    });
+
 });
 
 //Loading after loggin in
