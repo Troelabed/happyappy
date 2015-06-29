@@ -40,7 +40,7 @@ function nullHandler(){};
 
 
 function onDeviceReady() {
-    Phonon.Navigator().start('registreer');                    //load the content for the indexscreen: welkomscherm.html
+    Phonon.Navigator().start('welkomscherm');                    //load the content for the indexscreen: welkomscherm.html
 }
 
 
@@ -135,11 +135,11 @@ function onLoad() {
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Een', " +
-            "'Hier wat korte informatie over de app. een catch zin ofzo.', " +
-            "'Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. ', " +
+            "'Wandelen = zalig', " +
+            "'Veel huiswerk? Of gewoon druk? Een klein wandelingetje doet wonderen!', " +
+            "'Heb je veel huiswerk, moet je iedere dag naar je werk en ben je even toe aan tijd voor jezelf? Ga dan eens lekker wandelen. Is het goed weer? Loop dan lekker buiten, nodig anders vrienden uit als je dat nog leuker vindt. Is het slecht weer? Ga dan op rustige tijden in de sportschool op de loopband lopen. ', " +
             "'01.jpg', " +
-            "'Koken Muziek Uiterlijk', " +
+            "': Sport Uitstapjes', " +
             "'Open') "
             ,
             [],nullHandler,errorHandler);
@@ -147,23 +147,23 @@ function onLoad() {
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Twee', " +
-            "'Hier een klein beetje info voor app twee.', " +
-            "'Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren 60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.', " +
+            "'Dierentuin', " +
+            "'Dieren, wie wordt daar nou niet ‘happy’ van? Ga er eens een paar bezoeken!', " +
+            "'Nodig een paar vrienden uit om gezellig naar de dierentuin te gaan. Heb je binnenkort geen tijd? Maak dan alvast een afspraak voor in de toekomst.  ', " +
             "'02.jpg', " +
-            "'Categorie Uitstapjes Shoppen', " +
-            "'Selected') "
+            "'Uitstapjes', " +
+            "'Open') "
             ,
             [],nullHandler,errorHandler);
 
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Drie', " +
-            "'Nog wat informatie te vertellen.', " +
-            "'tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock', " +
+            "'Nieuw restaurantje uitproberen', " +
+            "'Ga eens naar dat nieuwe restaurantje! Het is misschien niet zo goedkoop, maar oh zo lekker!', " +
+            "'Heeft een dorp of stad bij jou in de buurt een nieuw restaurant geopend of is er misschien een restaurant waar je altijd al een keer hebt willen gaan eten? Waarom nog wachten? Ben een paar dagen zuinig met je uitgaven en ga nou eens een keertje daar eten! ', " +
             "'03.jpg', " +
-            "'Koken Kunst Uiterlijk', " +
+            "'Uitstapjes Koken', " +
             "'Open') "
             ,
             [],nullHandler,errorHandler);
@@ -171,11 +171,11 @@ function onLoad() {
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Vier', " +
-            "'Klein verhaaltje nog een keer, omdat het moet.', " +
-            "'een professor latijn aan de Hampden-Sydney College in Virginia, heeft één van de meer obscure latijnse woorden, consectetur, uit een Lorem Ipsum passage opgezocht, en heeft tijdens het zoeken naar het woord in de klassieke literatuur de onverdachte bron ontdekt', " +
+            "'Nieuwe winkels', " +
+            "'Ga je vaak naar Amsterdam? Of Utrecht? Check het station uit!', " +
+            "'Een plek waar je misschien niet direct aan denk als je aan shoppen denkt, een station. Als het Centraal Station Amsterdam is? Dan verandert je mening misschien. Er zijn nieuwe winkels geopend en dus reden voor een bezoekje! ', " +
             "'04.jpg', " +
-            "'Uitstapjes Uiterlijk Kunst', " +
+            "'Uitstapjes Shoppen', " +
             "'Open') "
             ,
             [],nullHandler,errorHandler);
@@ -183,11 +183,11 @@ function onLoad() {
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Vijf', " +
-            "'Blablabla korte informatie enzo.', " +
-            "'Lorem Ipsum komt uit de secties 1.10.32 en 1.10.33 van de Finibus Bonorum et Malorum (De uitersten van goed en kwaad) door Cicero, geschreven in 45 v.Chr. Dit boek is een verhandeling over de theorie der ethiek, erg populair tijdens de renaissance. De eerste regel van Lorem Ipsum, Lorem ipsum dolor sit amet.., komt uit een zin in sectie 1.10.32.', " +
+            "'Los in de keuken!', " +
+            "'Koken, het lijkt zo’n last. Maar het is zo’n feest als je een lekker maaltje hebt!', " +
+            "'Koken, soms een last, soms een vreugde. Laat alle stress los en ga samen met vrienden of misschien je ouders of kinderen koken. Ga gezellig naar de supermarkt of wie weet naar de boer en maak samen een heerlijk gerecht klaar. Geniet van de tijd die je spendeert terwijl je niet aan je verplichtingen hoeft te denken! ', " +
             "'05.jpg', " +
-            "'Koken Kunst Uiterlijk', " +
+            "'Koken', " +
             "'Open') "
             ,
             [],nullHandler,errorHandler);
@@ -195,23 +195,23 @@ function onLoad() {
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Zes', " +
-            "'Moeilijk om nog meer info te verzinnen.', " +
-            "'Het standaard stuk van Lorum Ipsum wat sinds de 16e eeuw wordt gebruikt is hieronder, voor wie er interesse in heeft, weergegeven. Secties 1.10.32 en 1.10.33 van de Finibus Bonorum et Malorum door Cicero zijn ook weergegeven in hun exacte originele vorm, vergezeld van engelse versies van de 1914 vertaling door H. Rackham.', " +
+            "'Muziekwinkel', " +
+            "'Het is even zoeken, maar muziekwinkels zijn zo leuk! Bezoek er een bij jou in de buurt.', " +
+            "'Ze zijn tegenwoordig zeldzaam, maar als jij een echte muziekliefhebber bent dan kun je hier mooi inspiratie opdoen. Welke genres vind je leuk en waarom? Breng dan eens een bezoekje aan een muziekwinkel en luister willekeurig cd’s uit die genres. Heb je hier geen tijd voor? Dan kun je dit ook op internet doen, denk aan Spotify. ', " +
             "'06.jpg', " +
-            "'Shoppen Muziek Evenementen', " +
-            "'Done') "
+            "'Muziek Uitstapjes', " +
+            "'Open') "
             ,
             [],nullHandler,errorHandler);
 
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Zeven', " +
-            "'Nog wat meer typen over deze suggestie.', " +
-            "'Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud. Het belangrijke punt van het gebruik van Lorem Ipsum is dat het uit een min of meer normale verdeling van letters bestaat, in tegenstelling tot Hier uw tekst, hier uw tekst wat het tot min of meer leesbaar nederlands maakt.', " +
+            "'Ezel', " +
+            "'Ezelen, het is een spel. Net als kunst! Pak je ezel en ga los!', " +
+            "'“Leuk” is relatief. Daarom hoef je geen groot kunstenaar te zijn om iets leuks of moois te maken. Pak een Schildersezel, verf(kwasten) of gewoon papier en potlood en begin met het maken van kunst! Gooi je liever gewoon met verf in de rondte? Pak dan een heel groot doek, leg het op een veilige plek en gooi met alle kleuren die jij wil. Leef je uit!  ', " +
             "'07.jpg', " +
-            "'Shoppen Kunst Koken', " +
+            "'Kunst Random', " +
             "'Open') "
             ,
             [],nullHandler,errorHandler);
@@ -219,23 +219,23 @@ function onLoad() {
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Acht', " +
-            "'Wist ik nog maar wat te vertellen.', " +
-            "'Veel desktop publishing pakketten en web pagina editors gebruiken tegenwoordig Lorem Ipsum als hun standaard model tekst, en een zoekopdracht naar lorem ipsum ontsluit veel websites die nog in aanbouw zijn. Verscheidene versies hebben zich ontwikkeld in de loop van de jaren, soms per ongeluk soms expres (ingevoegde humor en dergelijke).', " +
+            "'Moeder Natuur', " +
+            "'Genieten van alles om je heen!', " +
+            "'Schijnt de zon, regent het of ligt je afdak helemaal vol met sneeuw? Ga naar buiten! Sta daar gewoon even, in je tuin of in een park. Sluit je ogen en neem de geuren in je op, luister naar alles wat er om je heen gebeurd. De wereld is mooi, zoals Moeder Natuur heeft bedoeld. ', " +
             "'08.jpg', " +
-            "'Muziek Uitgaan Evenementen', " +
-            "'Selected') "
+            "'Random', " +
+            "'Open') "
             ,
             [],nullHandler,errorHandler);
 
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Negen', " +
-            "'Gelukkig is er Lorum Ipsum voor dit.', " +
-            "'Er zijn vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm, door ingevoegde humor of willekeurig gekozen woorden die nog niet half geloofwaardig ogen. Als u een passage uit Lorum Ipsum gaat gebruiken dient u zich ervan te verzekeren dat er niets beschamends midden in de tekst verborgen zit.', " +
+            "'(links of rechts)handig', " +
+            "'Het is een beetje oefenen, maar wie weet schuilt in die andere hand van jou een ware van Gogh!', " +
+            "'Het is ook een kunst om te schrijven met de hand waar je normaal niet mee schrijft. Schrijf een kaartje naar een vriend, vriendin, kennis, familielid of wie dan ook! Ben je rechtshandig, probeer dan eens met links te eten! Ben je linkshandig, probeer dan eens met rechts te schrijven. Je zult zelf merken dat het echt een kunst is! ', " +
             "'09.jpg', " +
-            "'Sport Kunst Evenementen', " +
+            "'Kunst Random', " +
             "'Done') "
             ,
             [],nullHandler,errorHandler);
@@ -243,15 +243,110 @@ function onLoad() {
         tx.executeSql( '' +
             "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
             "VALUES                  (" +
-            "'Suggestie Tien', " +
-            "'Dummietekst zelf verzinnen is best lastig.', " +
-            "'Alle Lorum Ipsum generators op Internet hebben de eigenschap voorgedefinieerde stukken te herhalen waar nodig zodat dit de eerste echte generator is op internet. Het gebruikt een woordenlijst van 200 latijnse woorden gecombineerd met een handvol zinsstructuur modellen om een Lorum Ipsum te genereren die redelijk overkomt. De gegenereerde Lorum Ipsum is daardoor altijd vrij van herhaling, ingevoegde humor of ongebruikelijke woorden etc.', " +
+            "'City Life', " +
+            "'Uitgaan is altijd leuk! Probeer eens wat anders met je looks!', " +
+            "'Zet je favoriete muziek op, trek iets leuks aan, doe je haren leuk en voor de vrouwen probeer iets leuks uit met make-up. Het is tijd om weer eens lekker de stad in te gaan!  ', " +
             "'10.jpg', " +
-            "'Sport Shoppen Evenementen', " +
+            "'Uitgaan Evenementen Uiterlijk', " +
             "'Open') "
             ,
             [],nullHandler,errorHandler);
 
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Een goede daad kan geen kwaad', " +
+            "'Helpen is goed voor je karma! En zelfs als je daar niet in geloofd, geeft het wel een goed gevoel!', " +
+            "'Stop bij een vriend/vriendin/familielid geld en eventueel een leuk briefje in hun broekzak - altijd leuk om te vinden! ', " +
+            "'11.jpg', " +
+            "'Random', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
+
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Koffiewolkjes', " +
+            "'Melk in je koffie gieten, als je er op let ziet het er zo mooi uit!', " +
+            "'Als je melk in je koffie giet ziet dit er heel mooi uit! Let eens op hoe de melk eruit ziet als wolkjes, uit elkaar gaan en tegen elkaar op botsen. Onbewuste kunst in een kop! ', " +
+            "'12.jpg', " +
+            "'Kunst Koken Random', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
+
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Have a nice day!', " +
+            "'Een vreemdeling goedendag zeggen, in Nederland is dit heel raar. Maar zo leuk!', " +
+            "'Loop lekker over straat, er lopen zoveel mensen die wel een vriendelijke begroeting kunnen gebruiken. Zeg eens goedendag tegen die oudere man, of tegen dat kindje. Het kan zijn dat ze er een beetje verward uitzien, maar diep van binnen vinden ze het wel heel leuk!', " +
+            "'13.jpg', " +
+            "'Random Uitstapjes', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
+
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Wekkertje wat vroeger', " +
+            "'Zet je wekker eens vroeg, ga naar buiten en geniet van de stilte.', " +
+            "'Random Uitstapjes Sport', " +
+            "'14.jpg', " +
+            "'Als je eens wat vroeger opstaat, lekker even naar buiten gaat op een mooie dag en even een paar minuutjes geniet van de stilte voor de wereld wakker wordt. Het is zo fijn en rustig!', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
+
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Bellen met die oude vriend of vriendin!', " +
+            "'Bel die oude vriend of vriendin eens op die je al een tijdje niet hebt gesproken.', " +
+            "'Ben je bang die vriend of vriendin te bellen omdat je denkt dat zij of hij denkt dat je hem/haar hebt laten zitten? De enige manier om dat op te lossen is door een telefoontje te plegen: vraag eens hoe het gaat, waar die persoon mee bezig is en misschien zelfs om binnenkort een kopje koffie of thee te doen! ', " +
+            "'15.jpg', " +
+            "'Random', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
+
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Groepslesjes', " +
+            "'Probeer eens een gratis proeflesje in de sportschool!', " +
+            "'Vaak hebben sportscholen gratis proeflesjes. Ga eens met een vriend of vriendin lekker zo’n proeflesje proberen! Misschien vindt je het wel heel leuk, en dan kan je lekker fit de zomer in! Mind happy, body happy! ', " +
+            "'16.jpg', " +
+            "'Sport Uiterlijk', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
+
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Trapje op, trapje af...', " +
+            "'Probeer eens voor een dag elke keer als je de trap pakt, hem nog een keertje extra te pakken.', " +
+            "'Het is goed voor je kost, weinig tijd en geeft je energie! Stel je moet een keer de trap op, ga dan nog eens naar beneden en dan weer omhoog. Klinkt als veel moeite, maar het gaat supersnel en het is goed voor je! Enne.. een fit lichaam is een fit hoofdje! ', " +
+            "'17.jpg', " +
+            "'Sport Random Uiterlijk', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
+
+        tx.executeSql( '' +
+            "INSERT INTO Suggesties  (Naam, KorteInfo, Informatie, Afbeelding, Categorie, CheckDone)" +
+            "VALUES                  (" +
+            "'Tweedehands winkeltjes', " +
+            "'Nieuwe dingen zijn duur… terwijl er zoveel goedkope leuke tweedehands winkels zijn!', " +
+            "'Er zijn best veel leuke winkeltjes die helemaal niet duur zijn! Je kan bijvoorbeeld om voor 20 centjes per stuk bestek kopen bij veel winkels die tweedehands spullen verkopen. Ideaal voor de arme student. ', " +
+            "'18.jpg', " +
+            "'Shoppen', " +
+            "'Open') "
+            ,
+            [],nullHandler,errorHandler);
         //PUT THE INFORMATION FOR THE SUGGESTIONS IN OUR OWN DATABASE
         tx.executeSql('SELECT * FROM Suggesties;', [],
 
@@ -662,10 +757,12 @@ function loadGebruikerInformation () {
                 var row = result.rows.item(0);
                 var categorieen = row.Categorie.split(" ");
 
-                var where = 'WHERE Categorie LIKE "%' + categorieen.join('%" AND Categorie LIKE "%') + '%"';
+                var where = 'WHERE Categorie LIKE "%' + categorieen.join('%" OR Categorie LIKE "%') + '%"';
+                //var orderby = 'ORDER BY Categorie LIKE "%' + categorieen.join('%" Categorie LIKE "%') + '%"';
+                //http://stackoverflow.com/questions/8533438/count-and-order-by-where-clause-matches
                 console.log(where);
 
-                transaction.executeSql(  'SELECT * FROM Suggesties '+ where+ 'AND CheckDone = "Open"', [],
+                transaction.executeSql(  'SELECT * FROM Suggesties '+ where + 'AND CheckDone = "Open"', [],
 
                     function(transaction, result) {
                         TopSuggesties = '';
@@ -705,7 +802,7 @@ function loadGebruikerInformation () {
                                         '<div class="text">' +
                                         '<h2>' + row.Naam + '</h2>' +
                                         '<p>' + row.KorteInfo + '</p>' +
-                                        '<i>' + row.Categorie + '</i>' +
+                                        //'<i>' + row.Categorie + '</i>' +
                                         '</div>'+
                                         '</div>' +
                                         '<div style="clear: both"></div>' +
@@ -795,6 +892,7 @@ $('#todolist').on('click', function() {
 
             function(transaction, result) {
                 ToDoList = '';
+                console.log('todolist');
                 //alert("chars-" + DoneList.length);
                 if (result != null && result.rows != null) {
 
@@ -817,7 +915,7 @@ $('#todolist').on('click', function() {
                                 '<p>' + row.Informatie +'</p>' +
                                 '<form>'+
 
-                                    '<label><input style="display: none;" type="checkbox" onclick="toDone(this)" class= "openCheckbox" value="'+SuggestieID+'"><span class="styleCheckbox"></span><span class="suggestieTekst">Done   </span><input type="checkbox" style="display: none;" onclick="toDelete(this)" class= "openCheckbox" value="'+SuggestieID+'"><span class="styleCheckbox"></span><span class="suggestieTekst">Verwijder</span></label>' +
+                                    '<label class="widthHalf"><input style="display: none;" type="checkbox" onclick="toDone(this)" class= "openCheckbox" value="'+SuggestieID+'"><span class="styleCheckbox"></span><span class="suggestieTekst">Done   </span></label><label class="widthHalf"><input type="checkbox" style="display: none;" onclick="toDelete(this)" class= "openCheckbox" value="'+SuggestieID+'"><span class="styleCheckbox"></span><span class="suggestieTekst">Verwijder</span></label>' +
                                 '</form>' +
                                 '</div>' +
                                 '</div>' +
@@ -829,7 +927,7 @@ $('#todolist').on('click', function() {
                                 '<div class="text">' +
                                 '<h2>' + row.Naam + '</h2>' +
                                 '<p>' + row.KorteInfo + '</p>' +
-                                '<i>' + row.Categorie + '</i>' +
+                                //'<i>' + row.Categorie + '</i>' +
                                 '</div>' +
                                 '</div>' +
                                 '<div style="clear: both"></div>' +
@@ -956,7 +1054,7 @@ $('#alreadydone').on('click', function() {
                                 '<img src="./img/list/' + row.Afbeelding + '" width="100%">' +
                                 '<p>' + row.Informatie +'</p>' +
                                 '<form>'+
-                                    '<label><input type="checkbox" style="display: none;"  class= "openCheckbox" checked value="'+SuggestieID+'"><span class="styleCheckbox"></span><span class="suggestieTekst"> Je hebt deze suggestie al uitgevoerd!</span></label>' +
+                                    '<label><input type="checkbox" style="display: none; pointer-events: none;"  class= "openCheckbox" checked value="'+SuggestieID+'"><span class="styleCheckbox" style="pointer-events: none;" ></span><span class="suggestieTekst"> Je hebt deze suggestie al uitgevoerd!</span></label>' +
                                 '</form>' +
                                 '</div>' +
                                 '</div>' +
@@ -968,7 +1066,7 @@ $('#alreadydone').on('click', function() {
                                 '<div class="text">' +
                                 '<h2>' + row.Naam + '</h2>' +
                                 '<p>' + row.KorteInfo + '</p>' +
-                                '<i>' + row.Categorie + '</i>' +
+                                //'<i>' + row.Categorie + '</i>' +
                                 '</div>' +
                                 '</div>' +
                                 '<div style="clear: both"></div>' +
@@ -992,6 +1090,7 @@ var bestaanCategorie = "";
 $('.sidenav .categorieselecteren').children().on('click', function() {
 
     var findCategory = $(this).attr('id');
+    $('.iconsbottom a').children().addClass('grey');
 
     $( ".categorieresult" ).empty();
 
@@ -1036,7 +1135,7 @@ $('.sidenav .categorieselecteren').children().on('click', function() {
                                 '<div class="text">' +
                                 '<h2>' + row.Naam + '</h2>' +
                                 '<p>' + row.KorteInfo + '</p>' +
-                                '<i>' + row.Categorie + '</i>' +
+                                //'<i>' + row.Categorie + '</i>' +
                                 '</div>' +
                                 '</div>' +
                                 '<div style="clear: both"></div>' +
@@ -1060,6 +1159,7 @@ $('#Zoeken').on('click', function() {
     var findSearchTerm = $('#Search').val();
 
     $( ".searchresultaat" ).empty();
+    $('.iconsbottom a').children().addClass('grey');
 
     $(".overlay").fadeOut('slow');
     $('.sidenav').animate({"left": '-90%'},1000);
@@ -1113,7 +1213,7 @@ $('#Zoeken').on('click', function() {
                                         '<div class="text">' +
                                         '<h2>' + row.Naam + '</h2>' +
                                         '<p>' + row.KorteInfo + '</p>' +
-                                        '<i>' + row.Categorie + '</i>' +
+                                        //'<i>' + row.Categorie + '</i>' +
                                         '</div>' +
                                         '</div>' +
                                         '<div style="clear: both"></div>' +
@@ -1251,14 +1351,14 @@ Phonon.Navigator().on({page: 'registreer', template: 'registreer', asynchronous:
     activity.onReady(function(self, el, req) {
 
 
-        $("#gebruikersnaam").focusin(function(){
-            $(".registreerform").css('margin-top','-30%');
-        //$(".redenennext").css('bottom','50%');
+        $(".registreerFirstPage").focusin(function(){
+            $(".registreerform").css('margin-top','-170px');
+            $(".greenBackground").css('height','550px');
         });
 
-        $("#gebruikersnaam").focusout(function(){
-            $(".registreerform").css('margin-top','100px');
-            //$(".redenennext").css('bottom','10%');
+        $(".registreerFirstPage").focusout(function(){
+            $(".registreerform").css('margin-top','0');
+            $(".greenBackground").css('height','335px');
         });
         console.log('registreer: onReady');   
     });
@@ -1312,9 +1412,8 @@ Phonon.Navigator().on({page: 'todo', template: 'todo', asynchronous: false}, fun
     });
 
     activity.onReady(function(self, el, req) {
-        //$('.todocontent').empty();
+        $('.todocontent').empty();
         $('.todocontent').append(ToDoList);
-        console.log(ToDoList);
         console.log('todo: onReady');                        //loads when you open the page
     });
 
@@ -1328,7 +1427,7 @@ Phonon.Navigator().on({page: 'done', template: 'done', asynchronous: false}, fun
     });
 
     activity.onReady(function(self, el, req) {
-        //$('.donecontent').empty();
+        $('.donecontent').empty();
         $('.donecontent').append(DoneList);
         console.log(DoneList);
         console.log('done: onReady');                        //loads when you open the page
@@ -1343,7 +1442,7 @@ Phonon.Navigator().on({page: 'categoriezoeken', template: 'categoriezoeken', asy
     });
 
     activity.onReady(function(self, el, req) {
-        //$('.categorieresult').empty();
+        $('.categorieresult').empty();
         $('.categorieresult').append(bestaanCategorie);
         console.log('categoriezoeken: onReady');                        //loads when you open the page
     });
@@ -1359,7 +1458,7 @@ Phonon.Navigator().on({page: 'searchresultaat', template: 'searchresultaat', asy
     });
 
     activity.onReady(function(self, el, req) {
-
+        $('.searchresultaat').empty();
         $('.searchresultaat').append(bestaanSearch);
         console.log(bestaanSearch);
         console.log('searchresultaat: onReady');                        //loads when you open the page

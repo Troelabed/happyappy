@@ -46,6 +46,11 @@ body {
 	background-size: cover;
 }
 
+ body, input, textarea, button, select, label, p {
+     font-family: 'Calibri', Helvetica, san-serif !important;
+     font-size: 16px;
+ }
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
@@ -159,6 +164,10 @@ body {
      padding-left: 8px !important;
  }
 
+ .btn-action:active {
+     background-color: #CEDF62;
+ }
+
  .btn-action.pull-left {
              /* margin-right: 26px; */
              left: 0;
@@ -262,8 +271,6 @@ label input[type="radio"]:checked + .styleCheckbox{
  }
 
  /*Table Stuff*/
-
- /*Table Stuff*/
  label {
      padding: 5px 0 !important;
  }
@@ -298,9 +305,25 @@ label input[type="radio"]:checked + .styleCheckbox{
          }
 
 
+.overzicht {
+    overflow: scroll;
+    max-height: 100%;
+}
+
+#lbGebruikers tbody tr:nth-child(1) {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+    #lbGebruikers tbody tr td,
+    #lbSuggesties tbody tr td {
+        padding: 5px 10px !important;
+        text-align: left;
+        height: auto;
+        line-height: 1 !important;
+    }
 
 /*Startscherm/loginscherm*/
-
  .app-page.start {
      overflow: hidden !important;
  }
@@ -427,11 +450,6 @@ label input[type="radio"]:checked + .styleCheckbox{
          margin-bottom: 30px;
      }
 
-/*Suggestiescherm*/
- .deviceready.searchresultaat {
-     max-height: 60%;
-     overflow-y: auto;
- }
 
 
 
@@ -440,34 +458,20 @@ label input[type="radio"]:checked + .styleCheckbox{
 
 
 
-
+/*Suggesties stuff*/
 
  .block {
      display: block;
  }
 
+
+ .wrapper {
+     width: 100%;
+ }
+
  .app-page.start {
      background-color: #cedf62;
  }
-
-
- .container {
-     width: 90%;
-     margin: 55px auto 0;
-     overflow: hidden;
-     height: 75%;
- }
-
-
-         .padded-for-cell.bottom {
-             margin-top: 20px;
-         }
-
-         .info {
-             width: 80%;
-             display: inline-block;
-         }
-
 
  .loadingscreen {
      display: block;
@@ -478,38 +482,72 @@ label input[type="radio"]:checked + .styleCheckbox{
      z-index: 99999;
  }
 
-     .loadingtwo {
-         text-align: center;
-     }
+ .loadingtwo {
+     text-align: center;
+ }
+
+
+ .container {
+     width: 90%;
+     margin: 55px auto 0;
+     overflow: hidden;
+     height: 75%;
+ }
+
+         .padded-for-cell.bottom {
+             margin-top: 20px;
+         }
+
+         .info {
+             width: 80%;
+             display: inline-block;
+         }
+
+         div.listcontent {
+             height: 70px;
+             display: table;
+             margin-top: 10px;
+             margin-bottom: 10px;
+         }
+
+
 
 .fancybox {
     display: block;
 }
 
  .listcontent img {
-     height: 70px;
-     width: 70px;
+     height: 60px;
+     width: 60px;
+     margin-right: 20px;
      border-radius: 50%;
      float: left;
+     background-size: cover;
+     margin-top: 5px;
  }
 
     .listcontent .text {
-        width: 60%;
-        float: left;
-        margin-left: 10%;
+        margin-left: 90px;
+        display: table-cell;
+        vertical-align: middle;
     }
 
- .listcontent .text h2 {
-     font-size: 20px;
- }
+         .listcontent .text h2 {
+             font-size: 20px;
+             color: #7e7e7e;
+         }
 
- .listcontent .text p {
-    text-align: justify;
- }
+         .listcontent .text p {
+            text-align: justify;
+             margin-bottom: 0;
+             color: #a4a4a4;
+         }
 
-.wrapper {
-    width: 100%;
-}
+             label.widthHalf {
+                 width: 42%;
+                 clear: none;
+                 float: left;
+             }
 
 
 

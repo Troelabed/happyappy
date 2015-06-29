@@ -15,16 +15,16 @@
                 <div class="greenBackground"></div>
 
                 <img src="./img/icons/formicons/loginicon.png" class="icoon gebruiker">
-                <input type="text" id="gebruikersnaam" name="gebruikersnaam" required placeholder="Gebruikersnaam" value="Sophie">
+                <input class="registreerFirstPage" type="text" id="gebruikersnaam" name="gebruikersnaam" required placeholder="Gebruikersnaam" value="Sophie">
 
                 <img src="./img/icons/formicons/mailicon.png" class="icoon email">
-                <input type="email" id="email" name="email" required placeholder="E-mail adres" value="sophie@hotmail.com">
+                <input class="registreerFirstPage" type="email" id="email" name="email" required placeholder="E-mail adres" value="sophie@hotmail.com">
 
                 <img src="./img/icons/formicons/passwordlogin.png" class="icoon wachtwoord">
-                <input type="password" id="wachtwoord" placeholder="Wachtwoord" name="wachtwoord" required value="1234">
+                <input class="registreerFirstPage" type="password" id="wachtwoord" placeholder="Wachtwoord" name="wachtwoord" required value="1234">
 
                 <img src="./img/icons/formicons/passwordlogin.png" class="icoon wachtwoord">
-                <input type="password" id="wachtwoordconfirm" placeholder="Bevestig wachtwoord" name="wachtwoordconfirm" required value="1234">
+                <input class="registreerFirstPage" type="password" id="wachtwoordconfirm" placeholder="Bevestig wachtwoord" name="wachtwoordconfirm" required value="1234">
 
                 <input type="button" class="padded-for-cell bottombutton " value="Ga verder" onClick="continueform()">
 

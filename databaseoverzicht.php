@@ -28,13 +28,21 @@
 
 <body onLoad="onLoad();">
 
-<h1>Overzicht van de gebruikers</h1>
-
-<table border="1" id="lbGebruikers"></table>
+<div class="overzicht">
 
 <h1>Overzicht van de gebruikers</h1>
+<table border="1" id="lbGebruikers">
+    <tr><td>ID:</td><td>Gebruikersnaam:</td><td>Emailadres:</td><td>Leeftijd:</td><td>Geslacht:</td><td>Categorie:</td><td>Druk of rustig:</td><td>Samen of alleen:</td><td>Wachtwoord:</td></tr>
+</table>
 
-<table border="1" id="lbSuggesties"></table
+<h1>Overzicht van de suggesties</h1>
+<table border="1" id="lbSuggesties">
+    <tr><td>ID:</td><td>Naam:</td><td>Korte informatie (subtitel):</td><td>Informatie over de suggestie:</td><td>Afbeeldingsnummer:</td><td>Categorie:</td><td>Status (open, checked, done, deleted):</td></tr>
+
+
+</table
+
+</div>
 
 
 
